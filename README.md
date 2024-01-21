@@ -1,5 +1,5 @@
 # fxproxy
-Wrapper for Java proxy handling.
+Wrapper for Java proxy handling, including a JavaFX Proxy Server Login Dialog.
 
 This code is split off from commonstoolkit as not many people need to handle proxies, so it is better to have it in a specialized library even if it's a tiny code set overall.
 
