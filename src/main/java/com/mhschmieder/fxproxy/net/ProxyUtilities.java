@@ -28,7 +28,7 @@
  *
  * Project: https://github.com/mhschmieder/proxytoolkit
  */
-package com.mhschmieder.proxytoolkit.net;
+package com.mhschmieder.fxproxy.net;
 
 import java.net.Authenticator;
 import java.net.ProxySelector;
