@@ -10,7 +10,7 @@
                 <goal>org.codehaus.mojo:exec-maven-plugin:1.5.0:exec</goal>
             </goals>
             <properties>
-                <exec.args>-classpath %classpath com.mhschmieder.proxytoolkit</exec.args>
+                <exec.args>-classpath %classpath com.mhschmieder.fxproxy</exec.args>
                 <exec.executable>java</exec.executable>
             </properties>
         </action>

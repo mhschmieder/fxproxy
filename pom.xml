@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mhschmieder</groupId>
-    <artifactId>proxytoolkit</artifactId>
+    <artifactId>fxproxy</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>ProxyToolkit</name>
-    <url>https://github.com/mhschmieder/commonstoolkit</url>
+    <name>FxProxy</name>
+    <url>https://github.com/mhschmieder/fxproxy</url>
     <description>Wrapper and extensions for proxy-vole.</description>
 
     <licenses>
@@ -21,9 +21,9 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/mhschmieder/proxytoolkit</url>
-        <connection>scm:git:git://github.com/mhschmieder/proxytoolkit.git</connection>
-        <developerConnection>scm:git:git@github.com:mhschmieder/proxytoolkit.git</developerConnection>
+        <url>https://github.com/mhschmieder/fxproxy</url>
+        <connection>scm:git:git://github.com/mhschmieder/fxproxy.git</connection>
+        <developerConnection>scm:git:git@github.com:mhschmieder/fxproxy.git</developerConnection>
     </scm>
 
     <developers>
