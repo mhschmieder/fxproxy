@@ -21,12 +21,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * This file is part of the FxProxyGui Library
+ * This file is part of the FxProxy Library
  *
- * You should have received a copy of the MIT License along with the
- * FxProxyGui Library. If not, see <https://opensource.org/licenses/MIT>.
+ * You should have received a copy of the MIT License along with the FxProxy
+ * Library. If not, see <https://opensource.org/licenses/MIT>.
  *
- * Project: https://github.com/mhschmieder/fxproxygui
+ * Project: https://github.com/mhschmieder/fxproxy
  */
 package com.mhschmieder.fxproxy.net;
 
@@ -48,9 +48,9 @@ public abstract class ProxyAuthenticator extends Authenticator {
     }
 
     // NOTE: The proxy authenticator isn't invoked until the first time a
-    // network request is made.
+    //  network request is made.
     // TODO: Take note of whether this happens just once, or on every server
-    // request.
+    //  request.
     @Override
     public PasswordAuthentication getPasswordAuthentication() {
         // Do not attempt to authenticate if there is no proxy.
