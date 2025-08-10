@@ -8,7 +8,7 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>FxProxy</name>
+    <name>fxproxy</name>
     <url>https://github.com/mhschmieder/fxproxy</url>
     <description>Wrapper and extensions for proxy-vole.</description>
 
