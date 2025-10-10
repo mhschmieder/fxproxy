@@ -30,16 +30,15 @@
  */
 package com.mhschmieder.fxproxy.dialog;
 
-import java.net.PasswordAuthentication;
-
 import com.mhschmieder.commonstoolkit.branding.ProductBranding;
 import com.mhschmieder.commonstoolkit.security.LoginCredentials;
 import com.mhschmieder.commonstoolkit.security.LoginType;
 import com.mhschmieder.commonstoolkit.util.ClientProperties;
 import com.mhschmieder.fxconcurrent.dialog.LoginDialogUtilities;
 import com.mhschmieder.fxproxy.net.ProxyAuthenticator;
-
 import javafx.application.Platform;
+
+import java.net.PasswordAuthentication;
 
 public final class ProxyLoginAuthenticator extends ProxyAuthenticator {
 

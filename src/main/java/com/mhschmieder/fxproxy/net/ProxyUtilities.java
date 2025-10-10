@@ -30,13 +30,13 @@
  */
 package com.mhschmieder.fxproxy.net;
 
-import java.net.Authenticator;
-import java.net.ProxySelector;
-
 import com.github.markusbernhardt.proxy.ProxySearch;
 import com.github.markusbernhardt.proxy.ProxySearch.Strategy;
 import com.github.markusbernhardt.proxy.selector.direct.NoProxySelector;
 import com.github.markusbernhardt.proxy.selector.misc.ProtocolDispatchSelector;
+
+import java.net.Authenticator;
+import java.net.ProxySelector;
 
 public final class ProxyUtilities {
 
