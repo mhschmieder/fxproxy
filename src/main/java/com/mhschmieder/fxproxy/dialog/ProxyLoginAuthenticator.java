@@ -30,12 +30,12 @@
  */
 package com.mhschmieder.fxproxy.dialog;
 
-import com.mhschmieder.commonstoolkit.branding.ProductBranding;
-import com.mhschmieder.commonstoolkit.security.LoginCredentials;
-import com.mhschmieder.commonstoolkit.security.LoginType;
-import com.mhschmieder.commonstoolkit.util.ClientProperties;
 import com.mhschmieder.fxconcurrent.dialog.LoginDialogUtilities;
 import com.mhschmieder.fxproxy.net.ProxyAuthenticator;
+import com.mhschmieder.jcommons.branding.ProductBranding;
+import com.mhschmieder.jcommons.security.LoginCredentials;
+import com.mhschmieder.jcommons.security.LoginType;
+import com.mhschmieder.jcommons.util.ClientProperties;
 import javafx.application.Platform;
 
 import java.net.PasswordAuthentication;
