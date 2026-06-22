@@ -30,7 +30,7 @@
  */
 package com.mhschmieder.fxproxy.dialog;
 
-import com.mhschmieder.fxconcurrent.dialog.LoginDialogUtilities;
+import com.mhschmieder.fxgui.dialog.LoginDialogUtilities;
 import com.mhschmieder.fxproxy.net.ProxyAuthenticator;
 import com.mhschmieder.jcommons.branding.ProductBranding;
 import com.mhschmieder.jcommons.security.LoginCredentials;
