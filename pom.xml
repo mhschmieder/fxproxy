@@ -66,12 +66,11 @@
         <dependency>
             <groupId>com.mhschmieder</groupId>
             <artifactId>jcommons</artifactId>
-            <version>0.1-SNAPSHOT</version>
-            <scope>compile</scope>
+            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>com.mhschmieder</groupId>
-            <artifactId>fxconcurrent</artifactId>
+            <artifactId>fxgui</artifactId>
             <version>0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
