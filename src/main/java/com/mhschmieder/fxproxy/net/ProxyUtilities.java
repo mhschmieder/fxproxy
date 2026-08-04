@@ -49,9 +49,11 @@ public final class ProxyUtilities {
     //  the Proxy Login will have been engaged and dismissed and the proxy
     //  forwarding setup has completed by the time this code is invoked.
     // NOTE: This method hasn't been used in years, but might be necessary?
-    public static boolean hasProxy( final String protocol ) throws SecurityException {
+    public static boolean hasProxy( final String protocol )
+            throws SecurityException {
         final ProxySelector proxySelector = ProxySelector.getDefault();
-        if ( ( proxySelector == null ) || ( proxySelector instanceof NoProxySelector ) ) {
+        if ( ( proxySelector == null )
+             || ( proxySelector instanceof NoProxySelector ) ) {
             return false;
         }
 
@@ -60,12 +62,12 @@ public final class ProxyUtilities {
         // macOS, there is an extra level of indirection per protocol via the
         // custom ProtocolDispatchSelector container/dispatcher class.
         if ( proxySelector instanceof ProtocolDispatchSelector ) {
-            final ProtocolDispatchSelector protocolDispatchSelector =
-                                                                    ( ProtocolDispatchSelector ) proxySelector;
-            final ProxySelector protocolProxySelector = protocolDispatchSelector
-                    .getSelector( protocol );
+            final ProtocolDispatchSelector protocolDispatchSelector
+                    = ( ProtocolDispatchSelector ) proxySelector;
+            final ProxySelector protocolProxySelector
+                    = protocolDispatchSelector.getSelector( protocol );
             if ( ( protocolProxySelector == null )
-                    || ( protocolProxySelector instanceof NoProxySelector ) ) {
+                 || ( protocolProxySelector instanceof NoProxySelector ) ) {
                 return false;
             }
         }
@@ -73,8 +75,22 @@ public final class ProxyUtilities {
         return true;
     }
 
+    // Set the proxy if one is detected.
+    public static ProxySelector setProxy( final ProxyAuthenticator proxyAuthenticator )
+            throws SecurityException {
+        // Install the appropriate proxy selector if a proxy is detected.
+        final ProxySelector proxySelector = installProxySelector();
+
+        // Set the authentication credentials for the proxy.
+        setProxyAuthenticator( proxyAuthenticator );
+
+        // Let the invoker cache whether there is a default proxy or not.
+        return proxySelector;
+    }
+
     // Install the appropriate proxy selector if a proxy is detected.
-    public static ProxySelector installProxySelector() throws SecurityException {
+    public static ProxySelector installProxySelector()
+            throws SecurityException {
         // Create a proxy search object with default settings. The default
         // settings chosen depend on the platform that we are currently running
         // on. Normally it is something like this: Try Java Proxy System
@@ -99,19 +115,6 @@ public final class ProxyUtilities {
         return proxySelector;
     }
 
-    // Set the proxy if one is detected.
-    public static ProxySelector setProxy( final ProxyAuthenticator proxyAuthenticator )
-            throws SecurityException {
-        // Install the appropriate proxy selector if a proxy is detected.
-        final ProxySelector proxySelector = installProxySelector();
-
-        // Set the authentication credentials for the proxy.
-        setProxyAuthenticator( proxyAuthenticator );
-
-        // Let the invoker cache whether there is a default proxy or not.
-        return proxySelector;
-    }
-
     // Set the authentication credentials for the proxy.
     // NOTE: The proxy authenticator isn't invoked until the first time a
     //  network request is made.
@@ -125,5 +128,4 @@ public final class ProxyUtilities {
         // username and password.
         Authenticator.setDefault( proxyAuthenticator );
     }
-
 }

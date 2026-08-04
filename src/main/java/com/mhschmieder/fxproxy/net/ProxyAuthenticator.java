@@ -35,7 +35,7 @@ import java.net.PasswordAuthentication;
 
 /**
  * NOTE: This class is designed to be overridden so that specific application
- *  level GUI classes can manage the gathering of proper proxy login credentials.
+ * level GUI classes can manage the gathering of proper proxy login credentials.
  * NOTE: We could also handle server type (in another class?), if direct login.
  */
 public abstract class ProxyAuthenticator extends Authenticator {
@@ -69,5 +69,4 @@ public abstract class ProxyAuthenticator extends Authenticator {
     }
 
     public abstract void requestProxyCredentials();
-
 }

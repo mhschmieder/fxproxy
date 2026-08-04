@@ -30,9 +30,5 @@
  */
 /**
  * This package contains support for dialogs associated with proxy Login.
- *
- * @version 1.0
- *
- * @author Mark Schmieder
  */
 package com.mhschmieder.fxproxy.dialog;

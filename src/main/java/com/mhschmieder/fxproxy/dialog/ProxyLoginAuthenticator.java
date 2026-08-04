@@ -36,24 +36,29 @@ import com.mhschmieder.jcommons.branding.ProductBranding;
 import com.mhschmieder.jcommons.security.LoginCredentials;
 import com.mhschmieder.jcommons.security.LoginType;
 import com.mhschmieder.jcommons.util.ClientProperties;
-import javafx.application.Platform;
 
 import java.net.PasswordAuthentication;
+
+import javafx.application.Platform;
 
 public final class ProxyLoginAuthenticator extends ProxyAuthenticator {
 
     public static final String PROXY_LOGIN_CONTEXT = "Proxy"; //$NON-NLS-1$
 
-    /** Declare a structure to hold the most recent Proxy Login credentials. */
-    public LoginCredentials    _proxyLoginCredentials;
+    /**
+     * Declare a structure to hold the most recent Proxy Login credentials.
+     */
+    public LoginCredentials _proxyLoginCredentials;
 
     /**
      * Cache the Client Properties (System Type, Locale, etc.).
      */
-    public ClientProperties    clientProperties;
+    public ClientProperties clientProperties;
 
-    /** Cache a reference to the product branding information. */
-    public ProductBranding     _productBranding;
+    /**
+     * Cache a reference to the product branding information.
+     */
+    public ProductBranding _productBranding;
 
     public ProxyLoginAuthenticator( final ClientProperties pClientProperties,
                                     final ProductBranding productBranding ) {
@@ -78,18 +83,19 @@ public final class ProxyLoginAuthenticator extends ProxyAuthenticator {
         // NOTE: I may have already written such a method myself earlier.
         // TODO: Check whether we're already on the FX Application thread?
         Platform.runLater( () -> {
-            final boolean loginCredentialsCaptured = LoginDialogUtilities
-                    .showLoginDialog( LoginType.PROXY,
-                                      _proxyLoginCredentials,
-                                      _productBranding.productName,
-                                      clientProperties.locale,
-                                      null,
-                                      false );
+            final boolean loginCredentialsCaptured
+                    = LoginDialogUtilities.showLoginDialog( LoginType.PROXY,
+                                                            _proxyLoginCredentials,
+                                                            _productBranding.productName,
+                                                            clientProperties.locale,
+                                                            null,
+                                                            false );
 
             // Convert (forward) Login Credentials to a Proxy Authenticator.
             if ( loginCredentialsCaptured ) {
-                _passwordAuthentication = new PasswordAuthentication( _proxyLoginCredentials
-                        .getUserName(), _proxyLoginCredentials.getPassword().toCharArray() );
+                _passwordAuthentication = new PasswordAuthentication(
+                        _proxyLoginCredentials.getUserName(),
+                        _proxyLoginCredentials.getPassword().toCharArray() );
             }
         } );
     }

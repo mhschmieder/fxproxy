@@ -31,9 +31,5 @@
 /**
  * This package contains the FxProxy Library's utilities network functionality
  * in support of proxy authentication using proxy-vole.
- *
- * @version 1.0
- *
- * @author Mark Schmieder
  */
 package com.mhschmieder.fxproxy.net;
